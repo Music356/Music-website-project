@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الهرم البيئي | Ecological Pyramid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            font-size: 30px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: #3498db;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        .pyramid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .level {
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .level:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .level1 { background: #c0392b; width: 30%; }
+        .level2 { background: #e67e22; width: 50%; }
+        .level3 { background: #f1c40f; width: 70%; }
+        .level4 { background: #27ae60; width: 90%; }
+        .qr-code {
+            margin-top: 30px;
+            text-align: center;
+        }
+        img {
+            width: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: rotate(5deg) scale(1.1);
+        }
+        .floating-icons {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 20px;
+            opacity: 0.7;
+        }
+        .floating-icons i {
+            margin: 0 5px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .floating-icons i:hover {
+            color: #3498db;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="floating-icons">
+            <i class="fas fa-leaf"></i>
+            <i class="fas fa-paw"></i>
+            <i class="fas fa-seedling"></i>
+        </div>
+        <h1 class="header">🔬 الهرم البيئي | Ecological Pyramid 🌎</h1>
+        <p>النظام البيئي يعتمد على انتقال الطاقة من المنتجين إلى المستهلكين النهائيين.<br>
+        The ecosystem relies on the transfer of energy from producers to top consumers.</p>
+        
+        <div class="pyramid">
+            <div class="level level1">🦅 المستهلكون النهائيون (المفترسات الكبرى) | Apex Predators</div>
+            <div class="level level2">🦊 المستهلكون الثانويون (آكلات اللحوم) | Carnivores</div>
+            <div class="level level3">🐰 المستهلكون الأوليون (العواشب) | Herbivores</div>
+            <div class="level level4">🌿 المنتجون (النباتات) | Producers (Plants)</div>
+        </div>
+        
+        <div class="qr-code">
+            <p>📱 امسح QR Code لمعرفة المزيد | Scan the QR Code to learn more:</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Ecological_pyramid" alt="QR Code">
+        </div>
+        <div class="footer">🌍 ساعد في حماية التوازن البيئي! | Help protect ecological balance! 🌱</div>
+    </div>
+</body>
+<video src="هرم الطاقة (1).mp4" width="500px " ></video>
+</body> 
+</html>
